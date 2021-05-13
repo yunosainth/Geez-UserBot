@@ -106,9 +106,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/vckyou/Geez-UserBot")
+    "https://github.com/yunosainth/Re-UserBot")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Geez-UserBot")
+    "UPSTREAM_REPO_BRANCH", "Re-UserBot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -430,7 +430,7 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("⚡𝗚𝗲𝗲𝘇 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Buat Userbot Mu Sendiri [Tekan Disini](https://vckyou.github.io/Geez-UserBot)")
+                await event.reply("⚡𝙍𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡, Buat Userbot Mu Sendiri [Tekan Disini](https://vckyou.github.io/Geez-UserBot)")
             else:
                 await event.reply(f"`Hai {DEFAULTUSER}\n\nApa Kabarmu ? 😊`")
 
@@ -446,7 +446,7 @@ with bot:
                     text="{}"
                     f"\n\n**Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n\n"
                     "◎› **Pʟᴜɢɪɴꜱ :** `{}`\n◎› **Mᴇɴᴜ ᴏꜰ ʙᴏᴛ ↯** \n".format(
-                        "** ╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ **",
+                        "** ╡⚡𝙍𝙚-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ **",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -454,22 +454,22 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ ",
+                    "Bantuan Dari ╡⚡𝙍𝙚-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ ",
                     text="Daftar Modul",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    " ╡⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ ",
-                    text="""**Anda Bisa Membuat ⚡𝗚𝗲𝗲𝘇-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Anda Sendiri Dengan Cara :** __Tekan Dibawah Ini__ 👇""",
+                    " ╡⚡𝙍𝙚-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡╞ ",
+                    text="""**Anda Bisa Membuat ⚡𝙍𝙚-𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡ Anda Sendiri Dengan Cara :** __Tekan Dibawah Ini__ 👇""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "⚡𝗚𝗲𝗲𝘇",
-                                "https://github.com/vckyou/Geez-UserBot"),
+                                "⚡𝙍𝙚",
+                                "https://github.com/yunosainth/Geez-UserBot"),
                             custom.Button.url(
                                 "✨𝗢𝘄𝗻𝗲𝗿",
-                                "t.me/VckyouuBitch")]],
+                                "t.me/Ndiritrus")]],
                     link_preview=False,
                 )
             await event.answer([result] if result else None)
