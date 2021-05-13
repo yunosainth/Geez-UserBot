@@ -1,9 +1,9 @@
 # Using Python Slim-Buster
 FROM xluxz/geezproject:buster
 # Lah U cp Atur atur
-# Geez-UserBot
+# Re-UserBot
 #
-RUN git clone -b Geez-UserBot https://github.com/vckyou/Geez-UserBot /root/userbot
+RUN git clone -b Re-UserBot https://github.com/yunosainth/Geez-UserBot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
